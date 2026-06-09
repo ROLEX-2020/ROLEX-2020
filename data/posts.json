@@ -1,0 +1,26 @@
+[
+  {
+    "id": "how-to-start-your-blog",
+    "title": "How to Start Your Blog",
+    "publishDate": "2026-06-10",
+    "excerpt": "Launch your first blog with a clear theme, fast setup, and writing workflow.",
+    "content": "<p>Starting a blog begins with choosing a topic that matters to you. Pick a name, write your first piece, and publish it with confidence.</p><p>Focus on consistency, not perfection. The first version of your blog can be simple and still look professional.</p>",
+    "readingTime": "4 min"
+  },
+  {
+    "id": "writing-better-posts",
+    "title": "Writing Better Posts",
+    "publishDate": "2026-06-09",
+    "excerpt": "Use strong intros, clear sections, and actionable takeaways to keep readers engaged.",
+    "content": "<p>Great posts are easy to scan and provide value quickly. Use short paragraphs, headings, and a friendly tone.</p><p>End with a question or next step so readers know what to do after they finish.</p>",
+    "readingTime": "3 min"
+  },
+  {
+    "id": "growing-your-audience",
+    "title": "Growing Your Audience",
+    "publishDate": "2026-06-08",
+    "excerpt": "Share your blog consistently and build connections with readers over time.",
+    "content": "<p>Promote your posts on social media and communities where your audience already hangs out.</p><p>Reply to every comment and keep publishing regularly; growth follows persistence.</p>",
+    "readingTime": "2 min"
+  }
+]

@@ -1,0 +1,11 @@
+<%- include('layout', {
+  title: post.title,
+  body: `
+    <article class="post-detail">
+      <p class="post-meta">${post.publishDate} · ${post.readingTime}</p>
+      <h1>${post.title}</h1>
+      <div class="post-content">${post.contentHtml || post.content}</div>
+      <a class="back-link" href="/">← Back to posts</a>
+    </article>
+  `
+}) %>

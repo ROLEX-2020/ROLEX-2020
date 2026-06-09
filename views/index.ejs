@@ -1,0 +1,22 @@
+<%- include('layout', {
+  title: 'Home',
+  body: `
+    <section class="intro">
+      <h1>Welcome to your blog</h1>
+      <p>Browse your latest posts below and open any article to read the full content.</p>
+    </section>
+    <section class="posts-grid">
+      ${posts
+        .map(
+          (post) => 
+            `<article class="post-card">
+              <h2>${post.title}</h2>
+              <time datetime="${post.publishDate}">${post.publishDate} · ${post.readingTime}</time>
+              <p>${post.excerpt}</p>
+              <a href="/post/${post.id}">Read more</a>
+            </article>`
+        )
+        .join('')}
+    </section>
+  `
+}) %>
