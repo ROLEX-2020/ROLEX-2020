@@ -75,26 +75,26 @@ function requireAuth(req, res, next) {
 }
 
 app.get('/', (req, res) => {
-  res.render('index', { posts });
+  res.render('index', { posts, hideMenu: false });
 });
 
 app.get('/post/:id', (req, res) => {
   const post = posts.find((item) => item.id === req.params.id);
   if (!post) {
-    return res.status(404).render('404', { message: 'Post not found' });
+    return res.status(404).render('404', { message: 'Post not found', hideMenu: false });
   }
   post.contentHtml = renderPostContent(post.content);
-  res.render('post', { post });
+  res.render('post', { post, hideMenu: false });
 });
 
 app.get('/login', (req, res) => {
-  res.render('login', { error: null, passwordHint, ADMIN_PASSWORD });
+  res.render('login', { error: null, passwordHint, ADMIN_PASSWORD, hideMenu: false });
 });
 
 app.post('/login', (req, res) => {
   const password = req.body.password || '';
   if (ADMIN_PASSWORD && password !== ADMIN_PASSWORD) {
-    return res.status(401).render('login', { error: 'Incorrect password', passwordHint, ADMIN_PASSWORD });
+    return res.status(401).render('login', { error: 'Incorrect password', passwordHint, ADMIN_PASSWORD, hideMenu: false });
   }
 
   const sessionId = crypto.randomBytes(24).toString('hex');
@@ -114,13 +114,13 @@ app.get('/logout', (req, res) => {
 });
 
 app.get('/admin', requireAuth, (req, res) => {
-  res.render('admin', { posts, isAdmin: true });
+  res.render('admin', { posts, isAdmin: true, hideMenu: true });
 });
 
 app.post('/admin', requireAuth, (req, res) => {
   const { title, excerpt, content } = req.body;
   if (!title || !content) {
-    return res.status(400).render('404', { message: 'Title and content are required.' });
+    return res.status(400).render('404', { message: 'Title and content are required.', hideMenu: false });
   }
 
   const newPost = {
