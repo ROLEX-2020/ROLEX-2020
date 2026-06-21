@@ -85,13 +85,13 @@ app.get('/post/:id', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  res.render('login', { error: null, ADMIN_PASSWORD, hideMenu: false });
+  res.render('login', { error: null, hideMenu: false });
 });
 
 app.post('/login', (req, res) => {
   const password = req.body.password || '';
   if (ADMIN_PASSWORD && password !== ADMIN_PASSWORD) {
-    return res.status(401).render('login', { error: 'Incorrect password', ADMIN_PASSWORD, hideMenu: false });
+    return res.status(401).render('login', { error: 'Incorrect password', hideMenu: false });
   }
 
   const sessionId = crypto.randomBytes(24).toString('hex');
