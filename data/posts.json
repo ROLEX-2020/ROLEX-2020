@@ -1,5 +1,13 @@
 [
   {
+    "id": "is-ebola-life-threatening-in-africa-than-european-countries",
+    "title": "IS EBOLA LIFE THREATENING IN AFRICA THAN EUROPEAN COUNTRIES??",
+    "publishDate": "2026-06-20",
+    "excerpt": "ebola is leaving people raising eyebrows in Africa",
+    "content": "Many people have been affected by the newly infectious disease that is widely spreading across African countries. It has left many people worried about its widespread within short period of time. It also causes high death rates as scientists have come together to help fight against the disease jointly. The main question remain that why do American government plan to deport her infected citizens out of the country for treatment",
+    "readingTime": "1 min"
+  },
+  {
     "id": "how-to-start-your-blog",
     "title": "How to Start Your Blog",
     "publishDate": "2026-06-10",
@@ -13,7 +21,8 @@
     "publishDate": "2026-06-09",
     "excerpt": "Use strong intros, clear sections, and actionable takeaways to keep readers engaged.",
     "content": "<p>Great posts are easy to scan and provide value quickly. Use short paragraphs, headings, and a friendly tone.</p><p>End with a question or next step so readers know what to do after they finish.</p>",
-    "readingTime": "3 min"
+    "readingTime": "3 min",
+    "contentHtml": "<p>Great posts are easy to scan and provide value quickly. Use short paragraphs, headings, and a friendly tone.</p><p>End with a question or next step so readers know what to do after they finish.</p>"
   },
   {
     "id": "growing-your-audience",

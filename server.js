@@ -88,13 +88,13 @@ app.get('/post/:id', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  res.render('login', { error: null, passwordHint });
+  res.render('login', { error: null, passwordHint, ADMIN_PASSWORD });
 });
 
 app.post('/login', (req, res) => {
   const password = req.body.password || '';
   if (ADMIN_PASSWORD && password !== ADMIN_PASSWORD) {
-    return res.status(401).render('login', { error: 'Incorrect password', passwordHint });
+    return res.status(401).render('login', { error: 'Incorrect password', passwordHint, ADMIN_PASSWORD });
   }
 
   const sessionId = crypto.randomBytes(24).toString('hex');
@@ -114,7 +114,7 @@ app.get('/logout', (req, res) => {
 });
 
 app.get('/admin', requireAuth, (req, res) => {
-  res.render('admin', { posts });
+  res.render('admin', { posts, isAdmin: true });
 });
 
 app.post('/admin', requireAuth, (req, res) => {

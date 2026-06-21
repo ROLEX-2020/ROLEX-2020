@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %> | ROLEX OTIENO</title>
+    <title><%= title %> | GHOSTS</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
         <div>
-          <a href="/" class="brand">ROLEX OTIENO</a>
-          <p class="hero-text">Real blog pages with a Node.js backend.</p>
+          <a href="/" class="brand">GHOSTS</a>
+          <p class="hero-text">near future is here. don't keep quite ,,,,ongea uskike.</p>
         </div>
-        <nav class="site-nav">
+        <% if (!hideMenu) { %>
+        <nav class="site-nav" id="site-nav">
           <a href="/">Home</a>
-          <a href="/admin">Post update</a>
-          <a href="/login">Login</a>
-          <a href="/logout">Logout</a>
+          <a href="/admin" class="admin-link">Post update</a>
+          <a href="/login" class="login-link">Login</a>
+          <a href="/logout" class="logout-link">Logout</a>
         </nav>
+        <% } %>
       </div>
     </header>
 
@@ -28,7 +30,7 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>Built with Express and EJS.</p>
+        <p>please enjoy your take</p>
       </div>
     </footer>
   </body>
