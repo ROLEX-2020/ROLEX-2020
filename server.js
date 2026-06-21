@@ -7,9 +7,6 @@ let posts = require(postsPath);
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || null;
 const sessions = {};
-const passwordHint = ADMIN_PASSWORD
-  ? 'Enter the admin password you set in ADMIN_PASSWORD.'
-  : 'No password is required. Just sign in.';
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -88,13 +85,13 @@ app.get('/post/:id', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  res.render('login', { error: null, passwordHint, ADMIN_PASSWORD, hideMenu: false });
+  res.render('login', { error: null, ADMIN_PASSWORD, hideMenu: false });
 });
 
 app.post('/login', (req, res) => {
   const password = req.body.password || '';
   if (ADMIN_PASSWORD && password !== ADMIN_PASSWORD) {
-    return res.status(401).render('login', { error: 'Incorrect password', passwordHint, ADMIN_PASSWORD, hideMenu: false });
+    return res.status(401).render('login', { error: 'Incorrect password', ADMIN_PASSWORD, hideMenu: false });
   }
 
   const sessionId = crypto.randomBytes(24).toString('hex');
